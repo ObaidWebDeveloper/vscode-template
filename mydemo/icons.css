@@ -1,0 +1,13 @@
+.vs-icons{
+    display: inline-block;
+    line-height: 1em;
+    height: 1em;
+    width: 1em;
+    background-color: white;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask: var(--i) no-repeat center;
+    mask: var(--i)  no-repeat center;
+    transform-origin: center center; /* Rotate around the center of the icon */
+    transform: rotate(0deg); /* Default rotation, can be adjusted dynamically */
+}
