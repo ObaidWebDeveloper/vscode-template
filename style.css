@@ -1,13 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.vs-icons{
+:root {
+    --mainColor: #dadada;
+    --lMainColor: #c5c5c595;
+}
+
+::selection{
+    display: none;
+}
+
+.vs-icons {
     display: inline-block;
     line-height: 1em;
     height: 1em;
@@ -16,11 +25,11 @@ body{
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask: var(--i) no-repeat center;
-    mask: var(--i)  no-repeat center;
+    mask: var(--i) no-repeat center;
 }
 
 
-.container{
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -28,27 +37,33 @@ body{
     overflow: hidden;
 }
 
-.container header{
+.container header {
     background: rgb(32, 33, 32);
     height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
+    color: var(--mainColor);
 }
 
-.header_left{
-    color:rgba(204, 204, 204, 0.6);
+.header_left {
+    color: rgba(204, 204, 204, 0.6);
 }
 
-.header_center{
+.header_left img {
+    height: 25px;
+    padding: 2px;
+}
+
+.header_center {
     display: flex;
     align-items: center;
     gap: 10px;
     width: 30%;
 }
 
-.header_center .header_input_box{
+.header_center .header_input_box {
     border: 1px solid rgba(204, 204, 204, 0.2);
     background: rgba(255, 255, 255, 0.05);
     color: rgba(204, 204, 204, 0.6);
@@ -59,130 +74,203 @@ body{
     text-align: center;
 }
 
-.header_center .header_input_box:hover{
+.header_center .header_input_box:hover {
     color: white;
     cursor: pointer;
 }
 
-.header_center .header_input_box input{
+.header_center .header_input_box input {
     background: transparent;
     border: none;
     outline: none;
 }
 
-.header_center .header-arrows{
+.header_center .header-arrows {
     display: flex;
     align-items: center;
 }
 
-.header_center .arrow-left,
-.header_center .arrow-right,
-.header_right .pannel{
+.header_center .header-arrow,
+.header_right .layouts {
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
-.header_center .arrow-left:hover,
-.header_center .arrow-right:hover,
-.header_right .pannel:hover{
-    background: rgba(255, 255, 255, 0.08);
-}
-
-.header_right{
+.header_right .layouts i {
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
 }
 
-.container section{
+.header_center .header-arrow:hover,
+.header_right .layouts i:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+}
+
+.container section {
     display: flex;
     height: 100%;
     width: 100%;
 }
 
-.container section .sidebar{
+.container section .sidebar {
     height: calc(100% - 20px);
     padding: 10px;
-    background: rgb(39,40,34);
+    background: rgb(39, 40, 34);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
 }
 
-.container section .sidebar img{
-    opacity: .5;
+.container section .sidebar .codicon {
     cursor: pointer;
-    width: 25px;
+    font-size: 25px;
+    color: var(--lMainColor);
 }
 
-.container section .sidebar img:hover{
+.container section .sidebar .codicon:hover {
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--mainColor);
+}
+
+.container section .sidebar .codicon:hover {
     opacity: 1;
 }
 
 .container section .sidebar .sidebar-top,
-.container section .sidebar .sidebar-bottom{
+.container section .sidebar .sidebar-bottom {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.container section .menu{
+.container section .menu {
     width: 300px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    background: rgb(30,31,28);
-    color: rgb(204,204,204);
+    background: rgb(30, 31, 28);
+    color: rgb(204, 204, 204);
     font-size: 11px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
-.container section .menu img{
+.container section .menu img {
     height: 15px;
 }
 
-.container section .menu .menu-header{
+.container section .menu .menu-header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: 7px 15px;
+    position: relative;
 }
 
-.container section .menu details.top-details summary{
-    font-weight: bold;
-    padding: 2px;
+.container section .menu .menu-header .explorer-menu-btn {
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 4px;
 }
 
-.container section .menu details.project-details{
-    transition: 0.5s linear;
+.container section .menu .menu-header .explorer-menu-btn:hover {
+    background: rgb(62, 61, 50, .5);
+}
+
+.container section .menu .menu-header .explorer-menu {
+    position: absolute;
+    background: rgb(32, 33, 32);
+    top: 35px;
+    right: -120px;
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 0 10px black;
+}
+
+.container section .menu .menu-header .explorer-menu li {
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: flex;
+    gap: 5px;
+}
+
+.container section .menu .menu-header .explorer-menu li:hover {
+    border-radius: 5px;
+    background: rgb(104, 102, 80);
+}
+
+.container section .menu details.project-details {
+    transition: 0.2s linear;
     height: 20px;
+    position: relative;
+    background: transparent;
+    z-index: 1;
 }
 
-.container section .menu details.project-details summary{
-    transition: 0.5s linear;
-    height: 20px;
+.container section .menu details.top-details .top-summary {
     font-weight: bold;
+    padding: auto 5px;
 }
 
-.container section .menu .project-details[open]{
+.container section .menu .project-details[open] {
     height: 100%;
 }
 
-.container section .menu details .folder-content{
-    margin-left: 5px;
-    font-size: 12px;
-    letter-spacing: 1px;
+.container section .menu details.project-details summary {
+    display: flex;
+    justify-content: space-between;
 }
 
-.container section .menu details details .folder-content{
+.container section .menu details.project-details summary .project-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container section .menu details.project-details summary .project-right {
+    display: none;
+    gap: 5px;
+}
+
+.container section .menu details.project-details summary .project-right i {
+    font-size: 17px;
+}
+
+.container section .menu .project-details[open]>summary .project-right {
+    display: flex;
+}
+
+.container section .menu details .folder-content {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-left: 5px;
+    margin-left: 6px;
+}
+
+.container section .menu details details .folder-content {
     border-left: .5px solid rgb(204,204,204,.5);
     height: fit-content;
     padding-left: 5px;
 }
 
-.container section .menu details summary{
-    background: rgb(39,40,34);
+.container section .menu details summary {
+    background: rgb(39, 40, 34);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -190,31 +278,127 @@ body{
     cursor: pointer;
 }
 
-.container section .menu details details summary{
+.container section .menu details details summary {
     background: none;
 }
 
-.container section .menu details summary .details-close{
+.container section .menu details details summary::before,
+.container section .menu details .file::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    z-index: -1;
+}
+
+.container section .menu details details summary:hover::before,
+.container section .menu details .file:hover::before {
+    background: rgb(62, 61, 50);
+}
+
+.container section .menu details summary .details-close {
     display: none;
 }
 
-.container section .menu details[open] > summary .details-open{
+.container section .menu details[open]>summary .details-open {
     display: none;
 }
 
-.container section .menu details[open] > summary .details-close{
+.container section .menu details[open]>summary .details-close {
     display: block;
 }
 
-.container section .menu details .file{
+.container section .menu details .file {
     display: flex;
+    align-items: center;
     gap: 5px;
     cursor: pointer;
-    padding: 2px 0;
+    padding: 3px 0;
 }
 
-.container footer{
-    background: rgb(65,67,57);
+.container section .editor{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgb(39,40,34);
+}
+
+.container section .editor .editor-head{
+    background: rgb(30,31,28);
+    color: var(--mainColor);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.container section .editor .editor-head img{
+    width: 15px;
+}
+
+.container section .editor .editor-head .head-files{
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.container section .editor .editor-head .head-file{
+    background: rgb(52,53,47);
+    width: fit-content;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container section .editor .editor-head .head-file.head-file-select{
+    background: #272822;
+}
+
+.container section .editor .editor-head .head-file .h-fileIcon{
+    width: fit-content;
+    display: flex;
+}
+
+.container section .editor .editor-head .head-file .h-file-close{
+    opacity: 0;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.container section .editor .editor-head .head-file.head-file-select .h-file-close{
+    opacity: 10;
+}
+
+.container section .editor .editor-head .head-file:hover .h-file-close{
+    opacity: 10;
+}
+
+.container section .editor .editor-head .head-file .h-file-close:hover{
+    background: rgb(70, 71, 64);
+}
+
+.container section .editor .editor-head .editor-head-right{
+    display: flex;
+    gap: 8px;
+}
+
+.container section .editor .editor-head .editor-head-right .codicon{
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.container section .editor .editor-head .editor-head-right .codicon:hover{
+    background: rgba(70, 71, 64, 0.534);
+}
+
+.container footer {
+    background: rgb(65, 67, 57);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -222,32 +406,32 @@ body{
     font-size: 14px;
 }
 
-.container footer span:hover{
+.container footer span:hover {
     background: #c5c5c52d;
 }
 
 .container footer .footer-left,
-.container footer .footer-right{
+.container footer .footer-right {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.container footer .footer-btn-1{
-    background: rgb(182,117,52);
+.container footer .footer-btn-1 {
+    background: rgb(182, 117, 52);
 }
 
 .container footer .footer-left span,
-.container footer .footer-right span{
+.container footer .footer-right span {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.container footer .footer-left span i{
+.container footer .footer-left span i {
     padding: 5px;
 }
 
-.container footer .footer-right span{
+.container footer .footer-right span {
     padding: 3.5px 5px;
 }

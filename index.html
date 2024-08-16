@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VS CODE - Template</title>
+    <link rel="stylesheet" href="https://microsoft.github.io/vscode-codicons/dist/codicon.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,45 +13,62 @@
     <div class="container">
         <header>
             <div class="header_left">
-                <h5>OBAID WEB DEVELOPER</h4>
+                <!-- <h5>OBAID WEB DEVELOPER</h4> -->
+                <img src="images/logo.svg" alt="">
             </div>
             <div class="header_center">
                 <div class="header-arrows">
-                    <img class="arrow-left" src="vs-icons/dark/arrow-left.svg" alt="">
-                    <img class="arrow-right" src="vs-icons/dark/arrow-right.svg" alt="">
+                    <i class="codicon codicon-arrow-left header-arrow"></i>
+                    <i class="codicon codicon-arrow-right header-arrow"></i>
                 </div>
                 <div class="header_input_box">
-                    <img src="vs-icons/dark/search.svg" height="15px" alt="">
-                    <label for="">vscode-template [Codespaces: miniature giggle]</label>
+                    <i class="codicon codicon-search"></i>
+                    <label for="">test-project [Codespaces: miniature giggle]</label>
                     <input type="text" name="" id="" hidden>
                 </div>
             </div>
             <div class="header_right">
-                <img src="vs-icons/dark/spli" alt="">
+                <div class="layouts">
+                    <i class="codicon codicon-layout-sidebar-left"></i>
+                    <!-- <i class="codicon codicon-layout-panel"></i>
+                    <i class="codicon codicon-layout-sidebar-right"></i>
+                    <i class="codicon codicon-layout-sidebar-left-off"></i> -->
+                    <i class="codicon codicon-layout-panel-off"></i>
+                    <i class="codicon codicon-layout-sidebar-right-off"></i>
+                    <i class="codicon codicon-layout"></i>
+                </div>
             </div>
         </header>
         <section>
             <div class="sidebar">
                 <div class="sidebar-top">
-                    <img src="vs-icons/dark/menu.svg" alt="">
-                    <img src="vs-icons/dark/files.svg" alt="">
-                    <img src="vs-icons/dark/search.svg" alt="">
-                    <img src="vs-icons/dark/source-control.svg" alt="">
-                    <img src="vs-icons/dark/debug-alt.svg" alt="">
-                    <img src="vs-icons/dark/extensions.svg" alt="">
-                    <img src="vs-icons/dark/github-inverted.svg" alt="">
+                    <i class="codicon codicon-menu"></i>
+                    <i class="codicon codicon-files"></i>
+                    <i class="codicon codicon-search"></i>
+                    <i class="codicon codicon-source-control"></i>
+                    <i class="codicon codicon-debug-alt"></i>
+                    <i class="codicon codicon-extensions"></i>
+                    <i class="codicon codicon-github-inverted"></i>
                 </div>
                 <div class="sidebar-bottom">
-                    <img src="vs-icons/dark/account.svg" alt="">
-                    <img src="vs-icons/dark/settings-gear.svg" alt="">
+                    <i class="codicon codicon-account"></i>
+                    <i class="codicon codicon-settings-gear"></i>
                 </div>
             </div>
 
             <div class="menu">
                 <div class="menu-header">
                     <span>EXPLORER</span>
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/ellipsis.svg)"></i>
-                </div>
+                    <i class="codicon codicon-ellipsis explorer-menu-btn"></i>
+
+                    <!-- H -->
+
+                    <div class="explorer-menu" hidden>
+                        <li><i class="codicon codicon-check"></i>Open Editor</li>
+                        <!-- <li><i class="codicon codicon-check" ></i>Folder</li> -->
+                        <li><i class="codicon codicon-check"></i>Outline</li>
+                        <li><i class="codicon codicon-check"></i>Timeline</li>
+                    </div>
                 </div>
 
                 <!-- H -->
@@ -64,47 +82,97 @@
                 </details>
 
                 <details class="top-details project-details" open>
-                    <summary>
-                        <i class="vs-icons details-open" style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                        <i class="vs-icons details-close" style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
-                        <span>TEST-PROJECT</span>
+                    <summary class="top-summary">
+                        <div class="project-left">
+                            <i class="codicon codicon-chevron-right details-open"></i>
+                            <i class="codicon codicon-chevron-down details-close"></i>
+                            <span>TEST-PROJECT</span>
+                        </div>
+                        <div class="project-right">
+                            <i class="codicon codicon-new-file"></i>
+                            <i class="codicon codicon-new-folder"></i>
+                            <i class="codicon codicon-refresh"></i>
+                            <i class="codicon codicon-collapse-all"></i>
+                        </div>
                     </summary>
                     <div class="folder-content">
                         <details>
                             <summary>
-                                <i class="vs-icons details-open" style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                                <i class="vs-icons details-close" style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
-                                <span>assets</span>
+                                <div class="project-left">
+                                    <i class="codicon codicon-chevron-right details-open"></i>
+                                    <i class="codicon codicon-chevron-down details-close"></i>
+                                    <span>assets</span>
+                                </div>
+                                <div class="project-right"></div>
                             </summary>
 
                             <div class="folder-content">
                                 <details>
                                     <summary>
-                                        <i class="vs-icons details-open"
-                                            style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                                        <i class="vs-icons details-close"
-                                            style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
-                                        <span>css</span>
+                                        <div class="project-left">
+                                            <i class="codicon codicon-chevron-right details-open"></i>
+                                            <i class="codicon codicon-chevron-down details-close"></i>
+                                            <span>css</span>
+                                        </div>
+                                        <div class="project-right"></div>
                                     </summary>
+
                                     <div class="folder-content">
                                         <div class="file">
-                                            <img src="file-icons/file_type_css.svg" alt="" srcset="">
+                                            <img src="file-icons/file_type_css.svg" alt="">
                                             <div class="file-name">style.css</div>
                                         </div>
                                     </div>
                                 </details>
+
                                 <details>
                                     <summary>
-                                        <i class="vs-icons details-open"
-                                            style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                                        <i class="vs-icons details-close"
-                                            style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
-                                        <span>js</span>
+                                        <div class="project-left">
+                                            <i class="codicon codicon-chevron-right details-open"></i>
+                                            <i class="codicon codicon-chevron-down details-close"></i>
+                                            <span>js</span>
+                                        </div>
+                                        <div class="project-right"></div>
                                     </summary>
+
                                     <div class="folder-content">
                                         <div class="file">
-                                            <img src="file-icons/file_type_js.svg" alt="" srcset="">
+                                            <img src="file-icons/file_type_js.svg" alt="">
                                             <div class="file-name">script.js</div>
+                                        </div>
+                                    </div>
+                                </details>
+
+                                <details>
+                                    <summary>
+                                        <div class="project-left">
+                                            <i class="codicon codicon-chevron-right details-open"></i>
+                                            <i class="codicon codicon-chevron-down details-close"></i>
+                                            <span>images</span>
+                                        </div>
+                                        <div class="project-right"></div>
+                                    </summary>
+
+                                    <div class="folder-content">
+                                        <div class="file">
+                                            <img src="file-icons/file_type_image.svg" alt="">
+                                            <div class="file-name">image1.png</div>
+                                        </div>
+                                        <div class="file">
+                                            <img src="file-icons/file_type_image.svg" alt="">
+                                            <div class="file-name">image2.png</div>
+                                        </div>
+                                        <div class="file">
+                                            <img src="file-icons/file_type_image.svg" alt="">
+                                            <div class="file-name">image3.png</div>
+                                        </div>
+                                        <div class="file">
+                                            <img src="file-icons/file_type_image.svg" alt="">
+                                            <div class="file-name">image4.png</div>
+                                        </div>
+                                        <div class="file">
+                                            <img src="file-icons/file_type_image.svg" alt="">
+                                            <div class="file-name">image5.png</div>
                                         </div>
                                     </div>
                                 </details>
@@ -112,49 +180,79 @@
                         </details>
 
                         <div class="file">
-                            <img src="file-icons/file_type_html.svg" alt="" srcset="">
+                            <img src="file-icons/file_type_html.svg" alt="">
                             <div class="file-name">index.hml</div>
                         </div>
                     </div>
                 </details>
 
                 <details class="top-details">
-                    <summary>
-                        <i class="vs-icons details-open" style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                        <i class="vs-icons details-close" style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
+                    <summary class="top-summary">
+                        <i class="codicon codicon-chevron-right details-open"></i>
+                        <i class="codicon codicon-chevron-down details-close"></i>
                         <span>OUTLINE</span>
                     </summary>
                 </details>
 
                 <details class="top-details">
-                    <summary>
-                        <i class="vs-icons details-open" style="--i:url(vs-icons/dark/chevron-right.svg)"></i>
-                        <i class="vs-icons details-close" style="--i:url(vs-icons/dark/chevron-down.svg)"></i>
+                    <summary class="top-summary">
+                        <i class="codicon codicon-chevron-right details-open"></i>
+                        <i class="codicon codicon-chevron-down details-close"></i>
                         <span>TIMELINE</span>
                     </summary>
                 </details>
+            </div>
+
+            <div class="editor">
+                <div class="editor-head">
+                    <div class="editor-head-left">
+                        <div class="head-files">
+                            <div class="head-file head-file-select">
+                                <span class="h-fileIcon">
+                                    <img src="file-icons/file_type_html.svg" alt="">
+                                </span>
+                                <span class="h-fileName">index.html</span>
+                                <i class="codicon codicon-close h-file-close"></i>
+                            </div>
+
+                            <div class="head-file">
+                                <span class="h-fileIcon">
+                                    <img src="file-icons/file_type_css.svg" alt="">
+                                </span>
+                                <span class="h-fileName">style.css</span>
+                                <i class="codicon codicon-close h-file-close"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="editor-head-right">
+                        <i class="codicon codicon-git-compare"></i>
+                        <i class="codicon codicon-split-horizontal"></i>
+                        <i class="codicon codicon-ellipsis"></i>
+                    </div>
+                </div>
             </div>
         </section>
         <footer>
             <div class="footer-left">
                 <span class="footer-btn-1">
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/remote.svg)" alt=""></i>
+                    <i class="codicon codicon-remote"></i>
                 </span>
 
                 <span class="footer-btn-2">
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/lock.svg)" alt=""></i>
+                    <i class="codicon codicon-lock"></i>
                     main*
-                    <span class="footer-btn-3"><i class="vs-icons" style="--i:url(vs-icons/dark/sync.svg)"
-                            alt=""></i></span>
+                    <span class="footer-btn-3">
+                        <i class="codicon codicon-sync"></i>
+                    </span>
                 </span>
 
                 <span class="footer-btn-4">
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/error.svg)" alt="">0</i>
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/warning.svg)" alt="">0</i>
+                    <i class="codicon codicon-error"></i> 0
+                    <i class="codicon codicon-warning"></i> 0
                 </span>
 
                 <span class="footer-btn-6">
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/radio-tower.svg)" alt="">3</i>
+                    <i class="codicon codicon-radio-tower"></i>3
                 </span>
             </div>
             <div class="footer-right">
@@ -165,11 +263,13 @@
                 <span class="lang">HTML</span>
                 <span class="layout">Layout: US</span>
                 <span class="notification">
-                    <i class="vs-icons" style="--i:url(vs-icons/dark/bell.svg)" alt=""></i>
+                    <i class="codicon codicon-bell"></i>
                 </span>
             </div>
         </footer>
     </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
