@@ -323,6 +323,7 @@ body {
     width: 100%;
     height: 100%;
     background: rgb(39,40,34);
+    overflow: ;
 }
 
 .container section .editor .editor-head{
@@ -395,6 +396,11 @@ body {
 
 .container section .editor .editor-head .editor-head-right .codicon:hover{
     background: rgba(70, 71, 64, 0.534);
+}
+
+.container section .editor #editor-box{
+    height: 100%;
+    width: 100%;
 }
 
 .container footer {
