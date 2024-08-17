@@ -1,2 +1,1 @@
-![VS CODE TEMPLATE](https://obaidwebdeveloper.github.io/vscode-template)
-![My Project Logo](images/project-screen-shot.png);
+![My Project Demo](images/project-screen-shot.png)
