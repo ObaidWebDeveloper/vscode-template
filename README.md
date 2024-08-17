@@ -1,2 +1,2 @@
-![VS CODE TEMPLATE](assets/logo.png)
+![VS CODE TEMPLATE](https://obaidwebdeveloper.github.io/vscode-template)
 ![My Project Logo](images/project-screen-shot.png);
