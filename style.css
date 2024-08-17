@@ -3,13 +3,16 @@
     padding: 0;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 :root {
     --mainColor: #dadada;
     --lMainColor: #c5c5c595;
+    --popupsBg: rgb(32, 33, 32);
+    --popupsChBg: rgb(104, 102, 80);
+    --mainFontFamily: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--mainFontFamily);
 }
 
 ::selection{
@@ -138,6 +141,7 @@ body {
     cursor: pointer;
     font-size: 25px;
     color: var(--lMainColor);
+    position: relative;
 }
 
 .container section .sidebar .codicon:hover {
@@ -155,6 +159,46 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu{
+    background: var(--popupsBg);
+    font-family: var(--mainFontFamily);
+    /* color: var(--lMainColor); */
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+    white-space: nowrap;
+    padding: 5px;
+    font-size: 10px;
+    position: absolute;
+    top: -10px;
+    left: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    z-index: 2;
+}
+
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu div{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu div:hover{
+    background: var(--popupsChBg);
+}
+
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu .codicon,
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu{
+    font-size: 15px;
+}
+
+.container section .sidebar .sidebar-top .sidebar_menu_btn .sidebar_menu .sidebar_menu_file_menu{
+    position: absolute;
+    left: 230px;
 }
 
 .container section .menu {
@@ -180,19 +224,19 @@ body {
     position: relative;
 }
 
-.container section .menu .menu-header .explorer-menu-btn {
+.container section .menu .menu-header .explorer-sidebar_menu_btn {
     cursor: pointer;
     padding: 3px;
     border-radius: 4px;
 }
 
-.container section .menu .menu-header .explorer-menu-btn:hover {
+.container section .menu .menu-header .explorer-sidebar_menu_btn:hover {
     background: rgb(62, 61, 50, .5);
 }
 
 .container section .menu .menu-header .explorer-menu {
     position: absolute;
-    background: rgb(32, 33, 32);
+    background: var(--popupsBg);
     top: 35px;
     right: -120px;
     list-style: none;
@@ -241,6 +285,8 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .container section .menu details.project-details summary .project-right {

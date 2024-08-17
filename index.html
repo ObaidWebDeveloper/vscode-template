@@ -13,8 +13,8 @@
     <div class="container">
         <header>
             <div class="header_left">
-                <!-- <h5>OBAID WEB DEVELOPER</h4> -->
                 <img src="images/logo.svg" alt="">
+                <!-- <h5>OBAID WEB DEVELOPER</h4> -->
             </div>
             <div class="header_center">
                 <div class="header-arrows">
@@ -42,7 +42,9 @@
         <section>
             <div class="sidebar">
                 <div class="sidebar-top">
-                    <i class="codicon codicon-menu"></i>
+                    <i class="codicon codicon-menu sidebar_menu_btn">
+                        <div class="sidebar_menu" hidden></div>
+                    </i>
                     <i class="codicon codicon-files"></i>
                     <i class="codicon codicon-search"></i>
                     <i class="codicon codicon-source-control"></i>
@@ -101,6 +103,8 @@
                                 <div class="project-left">
                                     <i class="codicon codicon-chevron-right details-open"></i>
                                     <i class="codicon codicon-chevron-down details-close"></i>
+                                    <i class="codicon codicon-folder details-open"></i>
+                                    <i class="codicon codicon-folder-opened details-close"></i>
                                     <span>assets</span>
                                 </div>
                                 <div class="project-right"></div>
@@ -112,6 +116,8 @@
                                         <div class="project-left">
                                             <i class="codicon codicon-chevron-right details-open"></i>
                                             <i class="codicon codicon-chevron-down details-close"></i>
+                                            <i class="codicon codicon-folder details-open"></i>
+                                            <i class="codicon codicon-folder-opened details-close"></i>
                                             <span>css</span>
                                         </div>
                                         <div class="project-right"></div>
@@ -130,6 +136,8 @@
                                         <div class="project-left">
                                             <i class="codicon codicon-chevron-right details-open"></i>
                                             <i class="codicon codicon-chevron-down details-close"></i>
+                                            <i class="codicon codicon-folder details-open"></i>
+                                            <i class="codicon codicon-folder-opened details-close"></i>
                                             <span>js</span>
                                         </div>
                                         <div class="project-right"></div>
@@ -148,6 +156,8 @@
                                         <div class="project-left">
                                             <i class="codicon codicon-chevron-right details-open"></i>
                                             <i class="codicon codicon-chevron-down details-close"></i>
+                                            <i class="codicon codicon-folder details-open"></i>
+                                            <i class="codicon codicon-folder-opened details-close"></i>
                                             <span>images</span>
                                         </div>
                                         <div class="project-right"></div>
@@ -271,8 +281,11 @@
                 <span class="end-line">LF</span>
                 <span class="lang">HTML</span>
                 <span class="layout">Layout: US</span>
-                <span class="notification">
+                <span class="notification" title="notification">
                     <i class="codicon codicon-bell"></i>
+                </span>
+                <span class="preview" title="preview">
+                    <i class="codicon codicon-preview"></i>
                 </span>
             </div>
         </footer>

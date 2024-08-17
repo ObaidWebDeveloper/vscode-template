@@ -1,5 +1,7 @@
 var headFiles = document.querySelectorAll(".head-file");
 
+// change files
+
 headFiles.forEach(function (file) {
     file.addEventListener("click", function () {
         headFiles.forEach(function (f) {
@@ -37,3 +39,12 @@ value = `*{
         // monaco_editor(fileExt,value);
     });
 });
+
+
+// menu on off
+
+var menu = document.getElementById("menu");
+
+menu.onclick = function(){
+    alert();
+}
